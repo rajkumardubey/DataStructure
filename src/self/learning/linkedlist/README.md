@@ -14,6 +14,10 @@ A linked list is a linear data structure (like arrays) where each element is a s
 ### Linked List Properties
 
 **Accessing Time**	:	O(n) 
+
 **Search Time**		: 	O(n) 
+
 **Insertion Time**	:	O(1) [If we are at the position where we have to insert an element] 
+
 **Deletion Time**	:	O(1) [If we know address of node previous the node to be deleted] 
+

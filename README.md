@@ -126,9 +126,9 @@ Extra Space : O(n) for pointers
 
 Note:
 	
-	**h**: Height of BST
+**h**: Height of BST
 	
-	**n**: Number of nodes in BST
+**n**: Number of nodes in BST
 
 BST provide moderate access/search (quicker than Linked List and slower than arrays).
 

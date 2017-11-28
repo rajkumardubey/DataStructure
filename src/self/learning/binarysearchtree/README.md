@@ -27,7 +27,7 @@ In Binary tree, number of leaf nodes is always one more than nodes with two chil
 
 **Time Complexity of Tree Traversal** = O(n)
 
-# Binary Search Tree
+## Binary Search Tree
 
 In Binary Search Tree is a Binary Tree with following additional properties:
 
@@ -37,12 +37,20 @@ In Binary Search Tree is a Binary Tree with following additional properties:
 
 ### BST Properties
 
-	Search :  O(h)
-	Insertion : O(h)
-	Deletion : O(h)
-	Extra Space : O(n) for pointers
+Search :  O(h)
 
-Note: **h**: Height of BST; **n**: Number of nodes in BST
+Insertion : O(h)
+
+Deletion : O(h)
+
+Extra Space : O(n) for pointers
+
+Note:
+	
+**h**: Height of BST
+	
+**n**: Number of nodes in BST
 
 BST provide moderate access/search (quicker than Linked List and slower than arrays).
+
 BST provide moderate insertion/deletion (quicker than Arrays and slower than Linked Lists).
