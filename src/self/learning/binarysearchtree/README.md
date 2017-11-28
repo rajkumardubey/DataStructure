@@ -17,15 +17,15 @@ A Binary Tree can be traversed in two ways:
 
 ### Binary Tree Properties
 
-	**The maximum number of nodes at level ‘l’** = 2l-1.
+**The maximum number of nodes at level ‘l’** = 2l-1.
 
-	**Maximum number of nodes** = 2h – 1. [Here h is height of a tree. Height is considered  as is maximum number of nodes on root to leaf path]
+**Maximum number of nodes** = 2h – 1. [Here h is height of a tree. Height is considered  as is maximum number of nodes on root to leaf path]
 
-	**Minimum possible height** =  ceil(Log2(n+1))   
+**Minimum possible height** =  ceil(Log2(n+1))   
 
-	In Binary tree, number of leaf nodes is always one more than nodes with two children.
+In Binary tree, number of leaf nodes is always one more than nodes with two children.
 
-	**Time Complexity of Tree Traversal** = O(n)
+**Time Complexity of Tree Traversal** = O(n)
 
 # Binary Search Tree
 

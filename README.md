@@ -17,12 +17,15 @@ Below is an overview of some popular linear data structures.
 Array is a data structure used to store homogeneous elements at contiguous locations. Size of an array must be provided before storing data.
 
 
-	Let size of array be n.
+Let size of array be n.
 
-	**Accessing Time**	:	O(1) [This is possible because elements are stored at contiguous locations]   
-	**Search Time**		: 	O(n) for Sequential Search; O(log n) for Binary Search [If Array is sorted]
-	**Insertion Time**	:	O(n) [The worst case occurs when insertion happens at the Beginning of an array and requires shifting all of the elements]
-	**Deletion Time**		:	O(n) [The worst case occurs when deletion happens at the Beginning of an array and requires shifting all of the elements]
+**Accessing Time**	:	O(1) [This is possible because elements are stored at contiguous locations]   
+
+**Search Time**		: 	O(n) for Sequential Search; O(log n) for Binary Search [If Array is sorted]
+
+**Insertion Time**	:	O(n) [The worst case occurs when insertion happens at the Beginning of an array and requires shifting all of the elements]
+
+**Deletion Time**	:	O(n) [The worst case occurs when deletion happens at the Beginning of an array and requires shifting all of the elements]
 
 ## Linked List
 
@@ -39,19 +42,21 @@ A linked list is a linear data structure (like arrays) where each element is a s
 
 ### Linked List Properties
 
-	**Accessing Time**	:	O(n) 
-	**Search Time**		: 	O(n) 
-	**Insertion Time**	:	O(1) [If we are at the position where we have to insert an element] 
-	**Deletion Time**		:	O(1) [If we know address of node previous the node to be deleted] 
+**Accessing Time**	:	O(n) 
+**Search Time**		: 	O(n) 
+**Insertion Time**	:	O(1) [If we are at the position where we have to insert an element] 
+**Deletion Time**		:	O(1) [If we know address of node previous the node to be deleted] 
 
 ## Stack
 
 A stack or LIFO (last in, first out) is an abstract data type that serves as a collection of elements, with two principal operations: push, which adds an element to the collection, and pop, which removes the last element that was added. In stack both the operations of push and pop takes place at the same end that is top of the stack. It can be implemented by using both array and linked list.
 
 
-	**Insertion Time**	:	O(1) 
-	**Deletion Time**		:	O(1) 
-	**Access Time** 		:	O(n) [Worst Case]
+**Insertion Time**	:	O(1) 
+
+**Deletion Time**	:	O(1) 
+
+**Access Time** 	:	O(n) [Worst Case]
 
 Note: Insertion and Deletion are allowed on one end.
 
@@ -59,9 +64,12 @@ Note: Insertion and Deletion are allowed on one end.
 
 A queue or FIFO (first in, first out) is an abstract data type that serves as a collection of elements, with two principal operations: enqueue, the process of adding an element to the collection.(The element is added from the rear side) and dequeue, the process of removing the first element that was added. (The element is removed from the front side). It can be implemented by using both array and linked list. 
 
-	**Insertion Time**	:	O(1) 
-	**Deletion Time**		:	O(1) 
-	**Access Time** 		:	O(n) [Worst Case]
+**Insertion Time**	:	O(1) 
+
+**Deletion Time**	:	O(1) 
+
+**Access Time** 	:	O(n) [Worst Case]
+
 	
 Note: **Circular Queue**:- The advantage of this data structure is that it reduces wastage of space in case of array implementation, As the insertion of the (n+1)’th element is done at the 0’th index if it is empty.
 
@@ -84,15 +92,15 @@ A Binary Tree can be traversed in two ways:
 
 ### Binary Tree Properties
 
-	**The maximum number of nodes at level ‘l’** = 2l-1.
+**The maximum number of nodes at level ‘l’** = 2l-1.
 
-	**Maximum number of nodes** = 2h – 1. [Here h is height of a tree. Height is considered  as is maximum number of nodes on root to leaf path]
+**Maximum number of nodes** = 2h – 1. [Here h is height of a tree. Height is considered  as is maximum number of nodes on root to leaf path]
 
-	**Minimum possible height** =  ceil(Log2(n+1))   
+**Minimum possible height** =  ceil(Log2(n+1))   
 
-	In Binary tree, number of leaf nodes is always one more than nodes with two children.
+In Binary tree, number of leaf nodes is always one more than nodes with two children.
 
-	**Time Complexity of Tree Traversal** = O(n)
+**Time Complexity of Tree Traversal** = O(n)
 
 ## Binary Search Tree
 
@@ -104,10 +112,10 @@ In Binary Search Tree is a Binary Tree with following additional properties:
 
 ### BST Properties
 
-	Search :  O(h)
-	Insertion : O(h)
-	Deletion : O(h)
-	Extra Space : O(n) for pointers
+Search :  O(h)
+Insertion : O(h)
+Deletion : O(h)
+Extra Space : O(n) for pointers
 
 Note: **h**: Height of BST; **n**: Number of nodes in BST
 
@@ -128,38 +136,49 @@ Graph can be classified on the basis of many things, below are the two most comm
 
 - Direction
 	
-	**Undirected Graph** : The graph in which all the edges are bidirectional.
-	
-	**Directed Graph** : The graph in which all the edges are unidirectional.
+**Undirected Graph** : The graph in which all the edges are bidirectional.
+
+**Directed Graph** : The graph in which all the edges are unidirectional.
 
 - Weight
 
-	**Weighted Graph** : The Graph in which weight is associated with the edges.
+**Weighted Graph** : The Graph in which weight is associated with the edges.
 	
-	**Unweighted Graph** : The Graph in which their is no weight associated to the edges.
+**Unweighted Graph** : The Graph in which their is no weight associated to the edges.
 
 
 Graph can be represented in many ways, below are the two most common representations :
 
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/graph_representation12.png">
 
+</br>
+</br>
+
 - 1: **Adjacency Matrix**
+</br>
 
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_matrix_representation.png">
+</br>
+</br>
 
 - 2: **Adjacency List**
 
+</br>
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_list_representation.png">
+</br>
+</br>
 
 
 ### Graph Properties
 
-	Time Complexities in case of Adjacency Matrix :
+Time Complexities in case of Adjacency Matrix :
 	
-		**Traversal**	:	By BFS or DFS) O(V^2)
-		**Space**		:	O(V^2)
+
+**Traversal**	:	By BFS or DFS) O(V^2)
+**Space**		:	O(V^2)
 	
-	Time Complexities in case of Adjacency List :
+Time Complexities in case of Adjacency List :
 	
-		**Traversal**	:	(By BFS or DFS) O(ElogV)
-		**Space**		:	O(V+E)
+
+**Traversal**	:	(By BFS or DFS) O(ElogV)
+**Space**		:	O(V+E)

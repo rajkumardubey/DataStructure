@@ -12,38 +12,49 @@ Graph can be classified on the basis of many things, below are the two most comm
 
 - Direction
 	
-	**Undirected Graph** : The graph in which all the edges are bidirectional.
-	
-	**Directed Graph** : The graph in which all the edges are unidirectional.
+**Undirected Graph** : The graph in which all the edges are bidirectional.
+
+**Directed Graph** : The graph in which all the edges are unidirectional.
 
 - Weight
 
-	**Weighted Graph** : The Graph in which weight is associated with the edges.
+**Weighted Graph** : The Graph in which weight is associated with the edges.
 	
-	**Unweighted Graph** : The Graph in which their is no weight associated to the edges.
+**Unweighted Graph** : The Graph in which their is no weight associated to the edges.
 
 
 Graph can be represented in many ways, below are the two most common representations :
 
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/graph_representation12.png">
 
+</br>
+</br>
+
 - 1: **Adjacency Matrix**
+</br>
 
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_matrix_representation.png">
+</br>
+</br>
 
 - 2: **Adjacency List**
 
+</br>
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_list_representation.png">
+</br>
+</br>
 
 
 ### Graph Properties
 
-	Time Complexities in case of Adjacency Matrix :
+Time Complexities in case of Adjacency Matrix :
 	
-		**Traversal**	:	By BFS or DFS) O(V^2)
-		**Space**		:	O(V^2)
+
+**Traversal**	:	By BFS or DFS) O(V^2)
+**Space**		:	O(V^2)
 	
-	Time Complexities in case of Adjacency List :
+Time Complexities in case of Adjacency List :
 	
-		**Traversal**	:	(By BFS or DFS) O(ElogV)
-		**Space**		:	O(V+E)
+
+**Traversal**	:	(By BFS or DFS) O(ElogV)
+**Space**		:	O(V+E)
