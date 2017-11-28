@@ -31,8 +31,6 @@ Graph can be represented in many ways, below are the two most common representat
 
 <img src="http://www.geeksforgeeks.org/wp-content/uploads/graph_representation12.png">
 
-<br></br>
-<br></br>
 
 - 1: **Adjacency Matrix**
 
@@ -40,8 +38,6 @@ Graph can be represented in many ways, below are the two most common representat
 
 <img src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_matrix_representation.png">
 
-<br></br>
-<br></br>
 
 - 2: **Adjacency List**
 
@@ -49,7 +45,6 @@ Graph can be represented in many ways, below are the two most common representat
 
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_list_representation.png">
 
-<br></br>
 <br></br>
 
 
@@ -85,10 +80,9 @@ This recursive nature of DFS can be implemented using stacks. The basic idea is 
 
 The following image shows how BFS works.
 
-<br></br>
-<br></br>
-
 <img src="https://he-s3.s3.amazonaws.com/media/uploads/9fa1119.jpg">
+
+<br></br>
 
 #### Pseudocode
 
@@ -134,9 +128,7 @@ As the name BFS suggests, you are required to traverse the graph breadth-wise as
 
 Consider the following diagram:
 <br></br>
-<br></br>
 <img src="https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg">
-<br></br>
 <br></br>
 
 The distance between the nodes in layer 1 is comparitively lesser than the distance between the nodes in layer 2. Therefore, in BFS, you must traverse all the nodes in layer 1 before you move to the nodes in layer 2.
@@ -153,10 +145,8 @@ To make this process easy, use a queue to store the node and mark it as 'visited
 
 The following image shows how BFS works.
 
-<br></br>
-<br></br>
-
 <img src="https://he-s3.s3.amazonaws.com/media/uploads/0dbec9e.jpg">
+<br></br>
 
 #### Pseudocode
 
@@ -180,3 +170,27 @@ BFS (G, s)                   //Where G is the graph and s is the source node
 #### Complexity
 
 The time complexity of BFS is O(V + E), where V is the number of nodes and E is the number of edges.
+
+
+### BFS vs DFS
+
+|								BFS									|								DFS									|
+|:------------------------------------------------------------------|:------------------------------------------------------------------|
+|BFS visit nodes level by level in Graph.							|DFS visit nodes of graph depth wise. It visits nodes until reach a leaf or a node which doesn’t have non-visited nodes.|
+|A node is fully explored before any other can begin.				|Exploration of a node is suspended as soon as another unexplored is found.|
+|Uses Queue data structure to store Un-explored nodes.				|Uses Stack data structure to store Un-explored nodes.				|
+|BFS is slower and require more memory.								|DFS is faster and require less memory.								|
+|Some Applications: 												|Some Applications:													|
+|- Finding all connected components in a graph.						|- Topological Sorting												|
+|- Finding the shortest path between two nodes.						|- Finding connected components										|
+|- Finding all nodes within one connected component.				|- Solving puzzles such as maze										|
+|- Testing a graph for bipartiteness.								|- Finding strongly connected components							|
+|																	|- Finding articulation points (cut vertices) of the graph.			|
+
+
+Example
+
+Considering A as starting vertex.
+
+<br></br>
+<img src="https://www.thecrazyprogrammer.com/wp-content/uploads/2017/06/Difference-between-BFS-and-DFS.jpg">
