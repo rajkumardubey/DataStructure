@@ -163,22 +163,34 @@ Graph can be classified on the basis of many things, below are the two most comm
 
 Graph can be represented in many ways, below are the two most common representations :
 
-<img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/graph_representation12.png">
+<br></br>
+<br></br>
+<br></br>
+
+<img src="http://www.geeksforgeeks.org/wp-content/uploads/graph_representation12.png">
 
 <br></br>
 <br></br>
 
 - 1: **Adjacency Matrix**
+
+<br></br>
+<br></br>
 <br></br>
 
-<img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_matrix_representation.png">
+<img src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_matrix_representation.png">
+
 <br></br>
 <br></br>
 
 - 2: **Adjacency List**
 
 <br></br>
+<br></br>
+<br></br>
+
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_list_representation.png">
+
 <br></br>
 <br></br>
 
