@@ -43,9 +43,13 @@ A linked list is a linear data structure (like arrays) where each element is a s
 ### Linked List Properties
 
 **Accessing Time**	:	O(n) 
+
 **Search Time**		: 	O(n) 
+
 **Insertion Time**	:	O(1) [If we are at the position where we have to insert an element] 
-**Deletion Time**		:	O(1) [If we know address of node previous the node to be deleted] 
+
+**Deletion Time**	:	O(1) [If we know address of node previous the node to be deleted] 
+
 
 ## Stack
 
@@ -113,13 +117,21 @@ In Binary Search Tree is a Binary Tree with following additional properties:
 ### BST Properties
 
 Search :  O(h)
+
 Insertion : O(h)
+
 Deletion : O(h)
+
 Extra Space : O(n) for pointers
 
-Note: **h**: Height of BST; **n**: Number of nodes in BST
+Note:
+	
+	**h**: Height of BST
+	
+	**n**: Number of nodes in BST
 
 BST provide moderate access/search (quicker than Linked List and slower than arrays).
+
 BST provide moderate insertion/deletion (quicker than Arrays and slower than Linked Lists).
 
 ## Graph
@@ -129,44 +141,49 @@ Graph is a data structure that consists of following two components:
 - A finite set of vertices also called as nodes.
 - A finite set of ordered pair of the form (u, v) called as edge. The pair is ordered because (u, v) is not same as (v, u) in case of directed graph(di-graph). The pair of form (u, v) indicates that there is an edge from vertex u to vertex v. The edges may contain weight/value/cost.
 
+```	
 	V -> Number of Vertices.
+	
 	E -> Number of Edges.
+```
 
 Graph can be classified on the basis of many things, below are the two most common classifications :
 
 - Direction
-	
+
+```	
 **Undirected Graph** : The graph in which all the edges are bidirectional.
 
 **Directed Graph** : The graph in which all the edges are unidirectional.
-
+```
 - Weight
 
+```
 **Weighted Graph** : The Graph in which weight is associated with the edges.
 	
 **Unweighted Graph** : The Graph in which their is no weight associated to the edges.
-
+```
 
 Graph can be represented in many ways, below are the two most common representations :
 
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/graph_representation12.png">
 
-</br>
-</br>
+<br>
+<br>
 
 - 1: **Adjacency Matrix**
-</br>
+<br>
 
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_matrix_representation.png">
-</br>
-</br>
+<br>
+<br>
 
 - 2: **Adjacency List**
 
-</br>
+<br>
 <img align="left" src="http://www.geeksforgeeks.org/wp-content/uploads/adjacency_list_representation.png">
-</br>
-</br>
+<br>
+<br>
 
 
 ### Graph Properties
@@ -175,10 +192,12 @@ Time Complexities in case of Adjacency Matrix :
 	
 
 **Traversal**	:	By BFS or DFS) O(V^2)
+
 **Space**		:	O(V^2)
 	
 Time Complexities in case of Adjacency List :
 	
 
 **Traversal**	:	(By BFS or DFS) O(ElogV)
+
 **Space**		:	O(V+E)
