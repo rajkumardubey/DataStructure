@@ -1,5 +1,5 @@
 /**
- * Copyright (Â©) 2017. All rights reserved.
+ * Copyright (©) 2017. All rights reserved.
  *
  * @author Raj Kumar Dubey
  */
@@ -8,6 +8,7 @@ package self.learning.graph;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * <b>Graph</b>
@@ -92,14 +93,45 @@ public class Graph {
 		}
 	}
 
+	/* perform depth First Traversal */
 	public void depthFirstTraversal(final int startPoint) {
 		final boolean[] isVerticesVisited = new boolean[adjacencyList.length];
 
-		depthFirstTraversalRecursion(startPoint, isVerticesVisited);
+		final Stack<Integer> stack = new Stack<>();
+
+		stack.push(startPoint);
+
+		int selectedVertice;
+		int vertice;
+		while (!stack.isEmpty()) {
+			selectedVertice = stack.peek();
+			stack.pop();
+
+			if (!isVerticesVisited[selectedVertice]) {
+				System.out.print(selectedVertice + " ");
+				isVerticesVisited[selectedVertice] = true;
+			}
+
+			Iterator<Integer> edgeIterator = adjacencyList[selectedVertice].listIterator();
+
+			while (edgeIterator.hasNext()) {
+				vertice = edgeIterator.next();
+				if (!isVerticesVisited[vertice]) {
+					stack.push(vertice);
+				}
+			}
+		}
 	}
 
-	/* perform Depth First Traversal */
-	public void depthFirstTraversalRecursion(final int startPoint, final boolean[] isVerticesVisited) {
+	/* perform depth First Traversal Recursion */
+	public void depthFirstTraversalRecursion(final int startPoint) {
+		final boolean[] isVerticesVisited = new boolean[adjacencyList.length];
+
+		depthFirstTraversalWithRecursion(startPoint, isVerticesVisited);
+	}
+
+	/* perform Depth First Traversal Recursion */
+	private void depthFirstTraversalWithRecursion(final int startPoint, final boolean[] isVerticesVisited) {
 		isVerticesVisited[startPoint] = true;
 		System.out.print(startPoint + " ");
 		Iterator<Integer> edgeIterator = adjacencyList[startPoint].listIterator();
@@ -108,9 +140,15 @@ public class Graph {
 		while (edgeIterator.hasNext()) {
 			vertice = edgeIterator.next();
 			if (!isVerticesVisited[vertice]) {
-				depthFirstTraversalRecursion(vertice, isVerticesVisited);
+				depthFirstTraversalWithRecursion(vertice, isVerticesVisited);
 			}
 		}
+	}
+
+	/* predicts if a circular/cyclic graph exist in this graph */
+	public boolean isCircular() {
+		return false;
+
 	}
 
 }

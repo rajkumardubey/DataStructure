@@ -35,7 +35,12 @@ public class Main {
 
 		System.out.println("\n\n------------------------------------------------------------------------------");
 		System.out.println("DFS Search for " + searchedNumber);
+//		myGraph.depthFirstTraversalRecursion(searchedNumber);
 		myGraph.depthFirstTraversal(searchedNumber);
+		
+		System.out.println();
+		System.out.println("Graph has a cylce starting from " + searchedNumber + " : " + myGraph.isCircular());
+		System.exit(0);
 	}
 
 }

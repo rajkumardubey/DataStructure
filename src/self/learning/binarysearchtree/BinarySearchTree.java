@@ -16,13 +16,32 @@ public class BinarySearchTree {
 
 	public BinarySearchTree() {
 		super();
-		root = null;
+		this.root = null;
+	}
+
+	public BinarySearchTree(final int[] sortedArray) {
+		this.root = createBSTFromArray(sortedArray, 0, sortedArray.length - 1);
+	}
+
+	private Node createBSTFromArray(final int[] sortedArray, final int start, final int end) {
+		/* base case */
+		if (start > end) {
+			return null;
+		}
+
+		int middle = (start + end) / 2;
+
+		Node node = new Node(sortedArray[middle]);
+		node.setLeft(createBSTFromArray(sortedArray, start, middle - 1));
+		node.setRight(createBSTFromArray(sortedArray, middle + 1, end));
+
+		return node;
 	}
 
 	/** insert into the BST */
 	public boolean insert(final int value) {
-		root = insertRecursion(this.root, value);
-		return root != null;
+		this.root = insertRecursion(this.root, value);
+		return this.root != null;
 	}
 
 	/** insertion method for recursion */
@@ -62,16 +81,16 @@ public class BinarySearchTree {
 	/** A utility function to do BST search */
 	private Node searchRecursion(int value, Node node) {
 		/*
-		 * if node is null or the data of the node is equal to the search amount return
-		 * the node
+		 * if node is null or the data of the node is equal to the search amount
+		 * return the node
 		 */
 		if (node == null || node.getData() == value) {
 			return node;
 		}
 
 		/*
-		 * if the searched item is smaller than value of node, then search the left side
-		 * or else search right side
+		 * if the searched item is smaller than value of node, then search the
+		 * left side or else search right side
 		 */
 		if (node.getData() > value) {
 			return searchRecursion(value, node.getLeft());
@@ -88,19 +107,21 @@ public class BinarySearchTree {
 	/** A utility function to do BST delete */
 	private Node deleteRecursion(int value, Node node) {
 		/*
-		 * if node is null or the data of the node is equal to the search amount return
-		 * the node
+		 * if node is null or the data of the node is equal to the search amount
+		 * return the node
 		 */
 		if (node == null) {
 			return node;
 		} else if (node.getData() > value) {
 			/*
-			 * if the searched item is smaller than value of node, then search the left side
+			 * if the searched item is smaller than value of node, then search
+			 * the left side
 			 */
 			node.setLeft(deleteRecursion(value, node.getLeft()));
 		} else if (node.getData() < value) {
 			/*
-			 * if the searched item is smaller than value of node, then search the left side
+			 * if the searched item is smaller than value of node, then search
+			 * the left side
 			 */
 			node.setRight(deleteRecursion(value, node.getRight()));
 		} else {
@@ -155,8 +176,8 @@ public class BinarySearchTree {
 	/** A utility function to do BST search */
 	private Node searchParentRecursion(int value, Node node) {
 		/*
-		 * if node is null or the data of the node is equal to the search amount return
-		 * the node
+		 * if node is null or the data of the node is equal to the search amount
+		 * return the node
 		 */
 		if (node == null || node.getData() == value) {
 			return null;
@@ -165,14 +186,14 @@ public class BinarySearchTree {
 		if (node.getLeft() != null && node.getLeft().getData() == value) {
 			return node;
 		}
-		
+
 		if (node.getRight() != null && node.getRight().getData() == value) {
 			return node;
 		}
 
 		/*
-		 * if the searched item is smaller than value of node, then search the left side
-		 * or else search right side
+		 * if the searched item is smaller than value of node, then search the
+		 * left side or else search right side
 		 */
 		if (node.getData() > value) {
 			return searchParentRecursion(value, node.getLeft());
