@@ -3,7 +3,7 @@
  *
  * @author Raj Kumar Dubey
  */
-package self.learning.binarysearchtree;
+package self.learning.binarysearchtree.bst;
 
 /**
  * <b>Node</b>
@@ -19,13 +19,6 @@ public class Node {
 	/** pointer to right node */
 	private Node right;
 
-	/** initialize a empty node */
-	public Node() {
-		super();
-		this.data = 0;
-		this.left = null;
-	}
-
 	/** initialize a node with given data */
 	public Node(final int data) {
 		super();
@@ -33,7 +26,6 @@ public class Node {
 		this.left = null;
 		this.right = null;
 	}
-
 
 	/**
 	 * @return the data

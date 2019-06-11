@@ -39,7 +39,7 @@ public class Main {
 		myGraph.depthFirstTraversal(searchedNumber);
 		
 		System.out.println();
-		System.out.println("Graph has a cylce starting from " + searchedNumber + " : " + myGraph.isCircular());
+		System.out.println("Graph has a cylce starting fromSortedArray " + searchedNumber + " : " + myGraph.isCircular());
 		System.exit(0);
 	}
 

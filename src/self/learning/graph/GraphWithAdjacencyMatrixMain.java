@@ -1,5 +1,5 @@
 /**
- * Copyright (©) 2017. All rights reserved.
+ * Copyright (ï¿½) 2017. All rights reserved.
  *
  * @author Raj Kumar Dubey
  */
@@ -183,7 +183,7 @@ public class GraphWithAdjacencyMatrixMain {
 		myGraph.depthFirstTraversal(searchedNumber);
 
 		System.out.println("\n\n------------------------------------------------------------------------------");
-		System.out.println("\n\nGraph has a cylce starting from " + searchedNumber + " : " + myGraph.isCyclic(4));
+		System.out.println("\n\nGraph has a cylce starting fromSortedArray " + searchedNumber + " : " + myGraph.isCyclic(4));
 		System.exit(0);
 	}
 
