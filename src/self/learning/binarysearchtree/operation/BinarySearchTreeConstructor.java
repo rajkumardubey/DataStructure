@@ -17,7 +17,7 @@ public class BinarySearchTreeConstructor {
 
         int middle = (start + end) / 2;
 
-        Node node = new Node(sortedArray[middle]);
+        final Node node = new Node(sortedArray[middle]);
         node.setLeft(fromSortedArray(sortedArray, start, middle - 1));
         node.setRight(fromSortedArray(sortedArray, middle + 1, end));
 

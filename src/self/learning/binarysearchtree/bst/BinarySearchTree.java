@@ -29,6 +29,7 @@ public class BinarySearchTree {
      */
     public void print() {
         BinarySearchTreeTraverser.inorder(this.root);
+        System.out.println("null");
     }
 
     /**
@@ -36,6 +37,7 @@ public class BinarySearchTree {
      */
     public void printPreOrder() {
         BinarySearchTreeTraverser.preorder(this.root);
+        System.out.println("null");
     }
 
     /**
@@ -43,6 +45,7 @@ public class BinarySearchTree {
      */
     public void printPostOrder() {
         BinarySearchTreeTraverser.postorder(this.root);
+        System.out.println("null");
     }
 
     /**
@@ -60,14 +63,14 @@ public class BinarySearchTree {
     }
 
     /**
-     * search a node in BST, if it does not exist return null
+     * isExists a node in BST, if it does not exist return null
      */
-    public Node searchNodeWithValue(final int value) {
-        return BinarySearchTreeNodeFinder.search(value, this.root);
+    public Boolean isValueExists(final int value) {
+        return BinarySearchTreeNodeFinder.isExists(value, this.root);
     }
 
     /**
-     * search a node in BST, if it does not exist return null
+     * isExists a node in BST, if it does not exist return null
      */
     public Node searchParentNodeOf(final int value) {
         return BinarySearchTreeMiscOperators.searchParent(value, this.root);

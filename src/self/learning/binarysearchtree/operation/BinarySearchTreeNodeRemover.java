@@ -16,20 +16,20 @@ public class BinarySearchTreeNodeRemover {
      */
     private static Node deleteRecursion(int value, Node node) {
         /*
-         * if node is null or the data of the node is equal to the search amount
+         * if node is null or the data of the node is equal to the isExists amount
          * return the node
          */
         if (node == null) {
             return null;
         } else if (node.getData() > value) {
             /*
-             * if the searched item is smaller than value of node, then search
+             * if the searched item is smaller than value of node, then isExists
              * the left side
              */
             node.setLeft(deleteRecursion(value, node.getLeft()));
         } else if (node.getData() < value) {
             /*
-             * if the searched item is smaller than value of node, then search
+             * if the searched item is smaller than value of node, then isExists
              * the left side
              */
             node.setRight(deleteRecursion(value, node.getRight()));

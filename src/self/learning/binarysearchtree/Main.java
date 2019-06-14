@@ -26,15 +26,16 @@ public class Main {
         // print inorder traversal of the BST
         tree.print();
 
-        System.out.println(tree.searchParentNodeOf(50));
+        System.out.println("Parent of 40 : " + tree.searchParentNodeOf(40).getData());
 
-        System.out.println(tree.getVerticalSum().entrySet());
+        System.out.println("Vertical Sum of BST : " + tree.getVerticalSum().entrySet());
 
-        System.out.println(tree.searchNodeWithValue(1000));
-
+        System.out.print("Deleting 50 and then the BST will be : ");
         tree.deleteNodeWithValue(50);
-
         tree.print();
+
+        System.out.println("70 Exists? : " + tree.isValueExists(70));
+        System.out.println("10 Exists? : " + tree.isValueExists(10));
 
         final int[] sortedArray = {2, 4, 6, 8, 10, 12, 14, 16};
 
@@ -43,10 +44,10 @@ public class Main {
         treeFromArray.print();
 
         // print pre-order traversal of the BST
-        tree.printPreOrder();
+        treeFromArray.printPreOrder();
 
         // print post-order traversal of the BST
-        tree.printPostOrder();
+        treeFromArray.printPostOrder();
 
     }
 

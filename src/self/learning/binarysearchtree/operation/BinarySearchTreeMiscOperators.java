@@ -31,22 +31,22 @@ public class BinarySearchTreeMiscOperators {
     }
 
     /**
-     * search a node in BST, if it does not exist return null
+     * isExists a node in BST, if it does not exist return null
      */
     public static Node searchParent(final int value, final Node root) {
         return searchParentRecursion(value, root);
     }
 
     /**
-     * A utility function to do BST search
+     * A utility function to do BST isExists
      */
-    private static Node searchParentRecursion(int value, Node node) {
+    private static Node searchParentRecursion(final int value, final Node node) {
         /*
-         * if node is null or the data of the node is equal to the search amount
-         * return the node
+         * if node is null or the data of the node is equal to the isExists amount
+         * return null
          */
         if (node == null || node.getData() == value) {
-            return null;
+            return node;
         }
 
         if (node.getLeft() != null && node.getLeft().getData() == value) {
@@ -58,8 +58,8 @@ public class BinarySearchTreeMiscOperators {
         }
 
         /*
-         * if the searched item is smaller than value of node, then search the
-         * left side or else search right side
+         * if the searched item is smaller than value of node, then isExists the
+         * left side or else isExists right side
          */
         if (node.getData() > value) {
             return searchParentRecursion(value, node.getLeft());

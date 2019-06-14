@@ -13,7 +13,7 @@ public class BinarySearchTreeTraverser {
     private static void inorderRecursion(final Node root) {
         if (root != null) {
             inorderRecursion(root.getLeft());
-            System.out.println(root.getData());
+            System.out.print(root.getData() + " -> ");
             inorderRecursion(root.getRight());
         }
     }
@@ -26,7 +26,7 @@ public class BinarySearchTreeTraverser {
     /** A utility function to do pre-order traversal of BST */
     private static void preorderRecursion(final Node root) {
         if (root != null) {
-            System.out.println(root.getData());
+            System.out.print(root.getData() + " -> ");
             preorderRecursion(root.getLeft());
             preorderRecursion(root.getRight());
         }
@@ -42,7 +42,7 @@ public class BinarySearchTreeTraverser {
         if (root != null) {
             postorderRecursion(root.getLeft());
             postorderRecursion(root.getRight());
-            System.out.println(root.getData());
+            System.out.print(root.getData() + " -> ");
         }
     }
 
