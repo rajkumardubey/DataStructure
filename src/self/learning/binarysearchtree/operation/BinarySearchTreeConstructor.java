@@ -2,14 +2,18 @@ package self.learning.binarysearchtree.operation;
 
 import self.learning.binarysearchtree.bst.Node;
 
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
 public class BinarySearchTreeConstructor {
 
     public static Node fromSortedArray(final int[] sortedArray) {
-        return fromSortedArray(sortedArray, 0, sortedArray.length - 1);
+        return fromSortedArrayRecursively(sortedArray, 0, sortedArray.length - 1);
     }
 
-    private static Node fromSortedArray(final int[] sortedArray,
-                                        final int start, final int end) {
+    private static Node fromSortedArrayRecursively(final int[] sortedArray,
+                                                   final int start, final int end) {
         /* base case */
         if (start > end) {
             return null;
@@ -18,10 +22,39 @@ public class BinarySearchTreeConstructor {
         int middle = (start + end) / 2;
 
         final Node node = new Node(sortedArray[middle]);
-        node.setLeft(fromSortedArray(sortedArray, start, middle - 1));
-        node.setRight(fromSortedArray(sortedArray, middle + 1, end));
+        node.setLeft(fromSortedArrayRecursively(sortedArray, start, middle - 1));
+        node.setRight(fromSortedArrayRecursively(sortedArray, middle + 1, end));
 
         return node;
+    }
+
+    public static Node fromBinaryTree(final Node binaryTreeRoot) {
+        final Set<Integer> inorder = new TreeSet<>();
+
+        createInorderTraversedSet(binaryTreeRoot, inorder);
+
+        updateToBinarySearchTree(binaryTreeRoot, inorder.iterator());
+
+        return binaryTreeRoot;
+    }
+
+
+    private static void createInorderTraversedSet(final Node node,
+                                                  final Set<Integer> inorder) {
+        if (node == null) return;
+
+        createInorderTraversedSet(node.getLeft(), inorder);
+        inorder.add(node.getData());
+        createInorderTraversedSet(node.getRight(), inorder);
+    }
+
+    private static void updateToBinarySearchTree(final Node binaryTreeNode,
+                                                 final Iterator<Integer> inorderBst) {
+        if (binaryTreeNode == null) return;
+
+        updateToBinarySearchTree(binaryTreeNode.getLeft(), inorderBst);
+        binaryTreeNode.setData(inorderBst.next());
+        updateToBinarySearchTree(binaryTreeNode.getRight(), inorderBst);
     }
 
 }

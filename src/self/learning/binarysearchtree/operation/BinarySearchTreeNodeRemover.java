@@ -2,6 +2,8 @@ package self.learning.binarysearchtree.operation;
 
 import self.learning.binarysearchtree.bst.Node;
 
+import java.util.Arrays;
+
 public class BinarySearchTreeNodeRemover {
 
     /**
@@ -55,8 +57,4 @@ public class BinarySearchTreeNodeRemover {
         }
         return node.getData();
     }
-
-
-
-
 }

@@ -24,6 +24,10 @@ public class BinarySearchTree {
         this.root = BinarySearchTreeConstructor.fromSortedArray(sortedArray);
     }
 
+    public BinarySearchTree(final Node binaryTree) {
+        this.root = BinarySearchTreeConstructor.fromBinaryTree(binaryTree);
+    }
+
     /**
      * print BST in sorted order
      */

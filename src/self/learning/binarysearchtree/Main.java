@@ -1,6 +1,7 @@
 package self.learning.binarysearchtree;
 
 import self.learning.binarysearchtree.bst.BinarySearchTree;
+import self.learning.binarysearchtree.bst.Node;
 
 public class Main {
 
@@ -49,6 +50,27 @@ public class Main {
         // print post-order traversal of the BST
         treeFromArray.printPostOrder();
 
+
+        /* Construct below binary tree
+                  8
+                /   \
+               /     \
+              3       5
+             / \     / \
+            /   \   /   \
+           10    2 4     6
+		*/
+        final Node binaryTreeRoot = new Node(8);
+        binaryTreeRoot.setLeft(new Node(3));
+        binaryTreeRoot.setRight(new Node(5));
+        binaryTreeRoot.getLeft().setLeft(new Node(10));
+        binaryTreeRoot.getLeft().setRight(new Node(2));
+        binaryTreeRoot.getRight().setLeft(new Node(4));
+        binaryTreeRoot.getRight().setRight(new Node(6));
+
+        final BinarySearchTree convertedBst = new BinarySearchTree(binaryTreeRoot);
+        System.out.print("Converted BST : ");
+        convertedBst.print();
     }
 
 }

@@ -21,11 +21,11 @@ public class BinarySearchTreeNodeInsertor {
             return new Node(value);
         }
 
-        if (node.getData() > value) {
+        if (node.getData() > value)
             node.setLeft(insertRecursion(node.getLeft(), value));
-        } else {
+        else
             node.setRight(insertRecursion(node.getRight(), value));
-        }
+
 
         return node;
     }
