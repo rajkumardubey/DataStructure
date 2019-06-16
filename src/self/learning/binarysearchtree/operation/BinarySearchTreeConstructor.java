@@ -14,9 +14,7 @@ public class BinarySearchTreeConstructor {
     private static Node fromSortedArrayRecursively(final int[] sortedArray,
                                                    final int start, final int end) {
         /* base case */
-        if (start > end) {
-            return null;
-        }
+        if (start > end) return null;
 
         int middle = (start + end) / 2;
 
