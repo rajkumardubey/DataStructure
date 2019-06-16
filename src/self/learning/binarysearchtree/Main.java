@@ -1,12 +1,11 @@
 package self.learning.binarysearchtree;
 
 import self.learning.binarysearchtree.bst.BinarySearchTree;
-import self.learning.binarysearchtree.bst.Node;
 
 public class Main {
 
     public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree();
+        final BinarySearchTree binarySearchTree = new BinarySearchTree();
 
         /*
          * Let us create following BST
@@ -16,28 +15,28 @@ public class Main {
          * / \ / \
          *20 40 60 80
          */
-        tree.insertNodeWithValue(50);
-        tree.insertNodeWithValue(30);
-        tree.insertNodeWithValue(20);
-        tree.insertNodeWithValue(40);
-        tree.insertNodeWithValue(70);
-        tree.insertNodeWithValue(60);
-        tree.insertNodeWithValue(80);
+        binarySearchTree.insertNodeWithValue(50);
+        binarySearchTree.insertNodeWithValue(30);
+        binarySearchTree.insertNodeWithValue(20);
+        binarySearchTree.insertNodeWithValue(40);
+        binarySearchTree.insertNodeWithValue(70);
+        binarySearchTree.insertNodeWithValue(60);
+        binarySearchTree.insertNodeWithValue(80);
 
         // print inorder traversal of the BST
-        tree.print();
+        binarySearchTree.print();
 
-//        System.out.println("Parent of 40 : " + tree.searchParentNodeOf(40).getData());
+//        System.out.println("Parent of 40 : " + binarySearchTree.searchParentNodeOf(40).getData());
 //
-//        System.out.println("Vertical Sum of BST : " + tree.getVerticalSum().entrySet());
-//        System.out.println("Horizontal Sum of BST : " + tree.getHorizontalSum().entrySet());
+//        System.out.println("Vertical Sum of BST : " + binarySearchTree.getVerticalSum().entrySet());
+//        System.out.println("Horizontal Sum of BST : " + binarySearchTree.getHorizontalSum().entrySet());
 
         System.out.print("Deleting 50 and then the BST will be : ");
-        tree.deleteNodeWithValue(50);
-        tree.print();
+        binarySearchTree.deleteNodeWithValue(50);
+        binarySearchTree.print();
 
-        System.out.println("70 Exists? : " + tree.isValueExists(70));
-        System.out.println("50 Exists? : " + tree.isValueExists(50));
+        System.out.println("70 Exists? : " + binarySearchTree.isValueExists(70));
+        System.out.println("50 Exists? : " + binarySearchTree.isValueExists(50));
 /*
         final int[] sortedArray = {1, 7, 9, 11, 12, 13, 15, 16};
         final BinarySearchTree treeFromArray = new BinarySearchTree(sortedArray);
