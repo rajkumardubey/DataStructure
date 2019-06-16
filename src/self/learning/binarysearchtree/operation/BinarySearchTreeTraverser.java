@@ -18,7 +18,7 @@ public class BinarySearchTreeTraverser {
         if (root == null) return;
 
         inorderRecursion(root.getLeft());
-        System.out.print(root.getData() + " -> ");
+        System.out.print(root.getData() + " ");
         inorderRecursion(root.getRight());
     }
 
@@ -35,7 +35,7 @@ public class BinarySearchTreeTraverser {
     private static void preorderRecursion(final Node root) {
         if (root == null) return;
 
-        System.out.print(root.getData() + " -> ");
+        System.out.print(root.getData() + " ");
         preorderRecursion(root.getLeft());
         preorderRecursion(root.getRight());
 
@@ -56,6 +56,6 @@ public class BinarySearchTreeTraverser {
 
         postorderRecursion(root.getLeft());
         postorderRecursion(root.getRight());
-        System.out.print(root.getData() + " -> ");
+        System.out.print(root.getData() + " ");
     }
 }
