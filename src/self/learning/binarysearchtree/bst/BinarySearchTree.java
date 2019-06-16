@@ -86,4 +86,28 @@ public class BinarySearchTree {
     public Map<Integer, Integer> getVerticalSum() {
         return BinarySearchTreeMiscOperators.getVerticalSum(this.root);
     }
+
+    /**
+     * find horizontal sum of all level in a BST
+     */
+    public Map<Integer, Integer> getHorizontalSum() {
+        return BinarySearchTreeMiscOperators.getHorizontalSum(this.root);
+    }
+
+    /**
+     * This utility method will convert a normal BST to balanced BST
+     */
+    public Node convertToBalancedBST(final Node binarySearchTree) {
+        final int[] sortedInorderArray = BinarySearchTreeConverter
+                .toInorderArray(binarySearchTree);
+
+        return BinarySearchTreeConstructor.fromSortedArray(sortedInorderArray);
+    }
+
+    /**
+     * merge this BST with the given BST
+     */
+    public void mergedWith(final BinarySearchTree anotherBST) {
+        this.root = BinarySearchTreeMerger.merge(this.root, anotherBST.root);
+    }
 }

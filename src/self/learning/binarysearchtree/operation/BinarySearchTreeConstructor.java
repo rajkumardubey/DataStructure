@@ -4,7 +4,6 @@ import self.learning.binarysearchtree.bst.Node;
 
 import java.util.Iterator;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class BinarySearchTreeConstructor {
 
@@ -29,24 +28,13 @@ public class BinarySearchTreeConstructor {
     }
 
     public static Node fromBinaryTree(final Node binaryTreeRoot) {
-        final Set<Integer> inorder = new TreeSet<>();
-
-        createInorderTraversedSet(binaryTreeRoot, inorder);
+        final Set<Integer> inorder = BinarySearchTreeConverter
+                .toInorderSet(binaryTreeRoot);
 
         updateToBinarySearchTree(binaryTreeRoot, inorder.iterator());
-
         return binaryTreeRoot;
     }
 
-
-    private static void createInorderTraversedSet(final Node node,
-                                                  final Set<Integer> inorder) {
-        if (node == null) return;
-
-        createInorderTraversedSet(node.getLeft(), inorder);
-        inorder.add(node.getData());
-        createInorderTraversedSet(node.getRight(), inorder);
-    }
 
     private static void updateToBinarySearchTree(final Node binaryTreeNode,
                                                  final Iterator<Integer> inorderBst) {

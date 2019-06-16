@@ -31,6 +31,29 @@ public class BinarySearchTreeMiscOperators {
     }
 
     /**
+     * find vertical sum of all node in a BST
+     */
+    public static Map<Integer, Integer> getHorizontalSum(final Node root) {
+        final Map<Integer, Integer> horizontalSum = new HashMap<>();
+        getHorizontalSumRecursion(root, horizontalSum, 0);
+        return horizontalSum;
+    }
+
+    /**
+     * find vertical sum of all node in a BST
+     */
+    private static void getHorizontalSumRecursion(final Node node,
+                                                final Map<Integer, Integer> horizontalSum,
+                                                final int verticalDistance) {
+        if (node == null)
+            return;
+
+        getHorizontalSumRecursion(node.getLeft(), horizontalSum, verticalDistance + 1);
+        horizontalSum.merge(verticalDistance, node.getData(), (a, b) -> a + b);
+        getHorizontalSumRecursion(node.getRight(), horizontalSum, verticalDistance + 1);
+    }
+
+    /**
      * isExists a node in BST, if it does not exist return null
      */
     public static Node searchParent(final int value, final Node root) {
