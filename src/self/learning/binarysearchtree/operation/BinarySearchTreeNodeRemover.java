@@ -2,8 +2,6 @@ package self.learning.binarysearchtree.operation;
 
 import self.learning.binarysearchtree.bst.Node;
 
-import java.util.Arrays;
-
 public class BinarySearchTreeNodeRemover {
 
     /**
@@ -21,9 +19,9 @@ public class BinarySearchTreeNodeRemover {
          * if node is null or the data of the node is equal to the isExists amount
          * return the node
          */
-        if (node == null) {
-            return null;
-        } else if (node.getData() > value) {
+        if (node == null) return null;
+
+        if (node.getData() > value) {
             /*
              * if the searched item is smaller than value of node, then isExists
              * the left side
