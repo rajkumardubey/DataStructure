@@ -23,6 +23,7 @@ public class Main {
 		singlyLinkedList.addAtTheStart("zeroth");
 
 		singlyLinkedList.addAtGivenPosition(5, "fifth");
+		singlyLinkedList.print();
 
 		System.out.println(singlyLinkedList.getSubSinglyLinkedList(2, 4));
 

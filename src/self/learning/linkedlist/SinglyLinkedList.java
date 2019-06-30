@@ -234,8 +234,7 @@ public class SinglyLinkedList {
      */
     public void sort() {
         Node tempHead = this.head;
-        final Node newhead = mergeSort(tempHead);
-        this.head = newhead;
+        this.head = mergeSort(tempHead);
     }
 
     /**
